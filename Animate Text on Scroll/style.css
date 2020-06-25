@@ -1,0 +1,16 @@
+body {
+    font-size: 24px;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid blue;
+}
+
+h1, h2, h3, p {
+    max-width: 25em;
+    line-height: 1.8;
+}
