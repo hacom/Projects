@@ -1,0 +1,102 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.pageload {
+	background-color: #2a2a3a;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-ms-transition: all 0.3s ease-in-out 0s;
+	-o-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+.loader {
+	display: flex;
+	position: relative;
+}
+.loader::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: white;
+	transform: scaleX(0);
+}
+
+.loader::after {
+	animation: scaleIn .8s ease-in-out 0.4s forwards;
+}
+
+@keyframes scaleIn {
+	100% {
+		transform: scaleX(1);
+	}
+}
+
+.text1,
+.text2 {
+	font-size: 38px;
+	line-height: 1;
+	font-weight: 700;
+	color: white;
+}
+.text1 {
+	animation: pop 1.5s ease-out;
+	animation-delay: 1.4s;
+	animation-fill-mode: backwards;
+	margin-right: 10px;
+}
+.text2 {
+	animation: pop 1.5s ease-out;
+	animation-delay: 2.2s;
+	animation-fill-mode: backwards;
+	margin-right: 10px;
+}
+@keyframes pop {
+	0% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	50% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+.heart {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	right: -130px;
+	top: 20px;
+	transform: translate(-50%, -50%);
+	background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+	animation: fave-heart 1.5s steps(28);
+	animation-delay: 4s;
+	opacity: 0;
+}
+
+@keyframes fave-heart {
+	0% {
+		background-position: 0 0;
+		opacity: 1;
+	}
+	100% {
+		background-position: -2800px 0;
+		opacity: 1;
+	}
+}
