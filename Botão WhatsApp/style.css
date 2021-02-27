@@ -33,19 +33,21 @@ p {
 }
 .whatsapp-tooltip {
 	position: absolute;
-	left: -160px;
+	left: -90px;
 	top: 17px;
 	font-size: 12px;
-	padding: 7px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 9px;
 	font-weight: bold;
 	text-decoration: none;
 	color: black;
 	visibility: hidden;
 	opacity: 0;
-	background: #25d366;
+	background: #fff;
 	transition: 300ms ease-in-out;
+	border-radius: 15px;
 }
-.whatsapp-tooltip::after {
+/* .whatsapp-tooltip::after {
 	content: '';
 	position: absolute;
 	top: 0px;
@@ -53,8 +55,8 @@ p {
 	display: block;
 	border-top: 15px solid transparent;
 	border-bottom: 15px solid transparent;
-	border-left: 15px solid #25d366;
-}
+	border-left: 15px solid #fff;
+} */
 .whatsapp-container:hover .whatsapp-tooltip {
 	transition: 300ms ease-in-out;
 	visibility: visible;
